@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StringCalculator {
-    private static final String DEFAULT_DELIMITER = "[,\\n]";
+    private static final String DEFAULT_DELIMITER = "[,\n]";
     public static int add(String stringInput) {
         if ("".equals(stringInput)) {
             return 0;
