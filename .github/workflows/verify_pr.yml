@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} is verify the PR.
 on:
   pull_request:
     branches:
-      - '*/*'
+      - '*'
 
 jobs:
   build:
