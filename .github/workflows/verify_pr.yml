@@ -11,6 +11,8 @@ on:
 
 jobs:
   build:
+    permissions:
+      pull-requests: write
 
     runs-on: ${{matrix.os}}
     strategy:
@@ -58,3 +60,8 @@ jobs:
           min-coverage-overall: 80
           min-coverage-changed-files: 80
           title: Code Coverage
+
+      - name: Get the Coverage info
+        run: |
+          echo "Total coverage ${{ steps.jacoco.outputs.coverage-overall }}"
+          echo "Changed Files coverage ${{ steps.jacoco.outputs.coverage-changed-files }}"
